@@ -1,7 +1,7 @@
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict
-from pydantic.alias_generators import to_camel
+from pydantic import BaseModel, ConfigDict  # pyright: ignore[reportMissingImports]
+from pydantic.alias_generators import to_camel  # pyright: ignore[reportMissingImports]
 
 
 class RemoveNoneModel(BaseModel):
@@ -17,3 +17,5 @@ class AliasedBaseModel(RemoveNoneModel):
         populate_by_name=True
     )
 
+    # hi
+Hello?

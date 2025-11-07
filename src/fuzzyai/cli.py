@@ -8,9 +8,9 @@ import sys
 from pathlib import Path
 from typing import Any, Optional
 
-import aiofiles
-import aiofiles.os
-from dotenv import load_dotenv
+import aiofiles  # pyright: ignore[reportMissingModuleSource]
+import aiofiles.os  # pyright: ignore[reportMissingModuleSource]
+from dotenv import load_dotenv  # pyright: ignore[reportMissingImports]
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from fuzzyai.consts import DEFAULT_SYSTEM_PROMPT, PARAMETER_MAX_TOKENS, WIKI_LINK
