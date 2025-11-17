@@ -1,0 +1,196 @@
+============================================
+QUICK REFERENCE CARD
+SillyTavern + Stable Diffusion Forge
+RTX 2080 Ti Edition
+============================================
+
+ESSENTIAL COMMANDS
+==================
+
+Start Stable Diffusion:
+→ C:\SD-Forge\START-SD-FORGE.bat
+
+Generate image in SillyTavern:
+→ /image <your prompt here>
+
+Access Forge WebUI:
+→ http://127.0.0.1:7860
+
+
+KEY SETTINGS (RTX 2080 Ti Optimized)
+=====================================
+
+For SDXL Models (Pony Diffusion XL):
+┌────────────────────────────────┐
+│ Steps:      25-35              │
+│ CFG Scale:  7                  │
+│ Resolution: 1024x1024          │
+│ Sampler:    DPM++ 2M Karras    │
+│ Speed:      ~20-30 sec/image   │
+└────────────────────────────────┘
+
+For SD 1.5 Models (Deliberate):
+┌────────────────────────────────┐
+│ Steps:      20-25              │
+│ CFG Scale:  7                  │
+│ Resolution: 512x512            │
+│ Sampler:    Euler a            │
+│ Speed:      ~5-10 sec/image    │
+└────────────────────────────────┘
+
+
+BEST MODELS FOR 2080 Ti + NSFW
+===============================
+
+1. Pony Diffusion XL    → Best overall quality
+2. AutismMix SDXL       → Great versatility
+3. Deliberate (SD 1.5)  → Fastest generation
+4. Realistic Vision     → Photorealistic style
+
+Download from: https://civitai.com/
+
+
+PROMPT TEMPLATES
+================
+
+Anime/Cartoon:
+"masterpiece, best quality, 1girl, [hair], [eyes],
+[clothing], [pose], [background], detailed face, anime style"
+
+Realistic:
+"masterpiece, best quality, photorealistic, [subject],
+[details], [lighting], highly detailed, 8k, sharp focus"
+
+Negative (always use):
+"low quality, worst quality, bad anatomy, bad hands,
+blurry, watermark, ugly, disfigured"
+
+
+FILE LOCATIONS
+==============
+
+Installation:
+C:\SD-Forge\stable-diffusion-webui-forge\
+
+Models:
+C:\SD-Forge\stable-diffusion-webui-forge\models\Stable-diffusion\
+
+Generated Images:
+C:\SD-Forge\stable-diffusion-webui-forge\outputs\txt2img-images\
+
+VAE (optional):
+C:\SD-Forge\stable-diffusion-webui-forge\models\VAE\
+
+
+SILLYTAVERN CONFIG
+==================
+
+Extension: Image Generation
+Source: Stable Diffusion
+API URL: http://127.0.0.1:7860
+Model: [Select your downloaded model]
+
+Test connection → Save Settings
+
+
+TROUBLESHOOTING QUICK FIXES
+============================
+
+Connection Failed:
+✓ Is Forge running? (START-SD-FORGE.bat)
+✓ See "Running on local URL: http://127.0.0.1:7860"?
+✓ Try opening http://127.0.0.1:7860 in browser
+
+Too Slow:
+✓ Use SD 1.5 models instead of SDXL
+✓ Reduce resolution to 512x512
+✓ Reduce steps to 20
+✓ Close other GPU apps
+
+Out of Memory:
+✓ Close browser/games
+✓ Reduce resolution
+✓ Use SD 1.5 models
+✓ Check --medvram is in launch args
+
+Low Quality:
+✓ Increase steps to 30-40
+✓ Try DPM++ 2M Karras sampler
+✓ Improve prompt details
+✓ Add quality tags: "masterpiece, best quality"
+
+
+PERFORMANCE EXPECTATIONS
+=========================
+
+Your RTX 2080 Ti (11GB VRAM):
+✓ SDXL at 1024x1024: WORKS GREAT
+✓ SD 1.5 at 512x512: VERY FAST
+✓ Multiple images: Support batch generation
+✓ Overall: Excellent for NSFW generation
+
+
+WORKFLOW SUMMARY
+================
+
+1. Start Forge (keep running)
+   → C:\SD-Forge\START-SD-FORGE.bat
+
+2. Start SillyTavern
+   → Your normal SillyTavern start.bat
+
+3. Chat normally, when you want an image:
+   → /image beautiful sunset over ocean
+
+4. Or enable auto-generate for context-based images
+
+
+USEFUL LINKS
+============
+
+Models: https://civitai.com/
+Prompts: https://prompthero.com/stable-diffusion-prompt-guide
+Forge: https://github.com/lllyasviel/stable-diffusion-webui-forge
+SillyTavern: https://github.com/SillyTavern/SillyTavern
+
+
+LAUNCH ARGS EXPLAINED
+=====================
+
+Already configured in webui-user.bat:
+
+--xformers         → Faster, less VRAM
+--api              → Enable SillyTavern connection
+--medvram          → Prevent OOM on 11GB cards
+--opt-sdp-attention → Memory optimization
+--no-half-vae      → Better image quality
+
+
+TIPS & TRICKS
+=============
+
+✓ Keep Forge window open while using SillyTavern
+✓ First launch takes 5-10 min (downloads dependencies)
+✓ Use detailed prompts for better results
+✓ Always include negative prompts
+✓ Try different samplers if unhappy with results
+✓ Lower CFG for more creative results (5-6)
+✓ Higher CFG for prompt adherence (8-10)
+✓ Save good prompts for reuse
+✓ Check CivitAI for prompt examples with models
+
+
+NSFW GENERATION
+===============
+
+✓ No filters enabled
+✓ Models support NSFW natively
+✓ Be specific in prompts
+✓ Pony Diffusion XL highly recommended
+✓ Use appropriate negative prompts
+✓ Check model pages for example prompts
+
+
+============================================
+Save this file for easy reference!
+============================================

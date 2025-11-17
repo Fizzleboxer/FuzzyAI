@@ -1,0 +1,130 @@
+============================================
+SillyTavern Image Generation Configuration
+For Stable Diffusion WebUI Forge + RTX 2080 Ti
+============================================
+
+STEP 1: START STABLE DIFFUSION FORGE
+-------------------------------------
+1. Run START-SD-FORGE.bat (or webui-user.bat in the Forge folder)
+2. Wait for it to fully load (first time takes 5-10 minutes)
+3. You should see: "Running on local URL: http://127.0.0.1:7860"
+4. Keep this window open while using SillyTavern
+
+STEP 2: CONFIGURE SILLYTAVERN
+------------------------------
+1. Open SillyTavern (run start.bat in your SillyTavern folder)
+
+2. Click the "Extensions" icon (puzzle piece) in the top menu
+
+3. Enable "Image Generation" extension if not already enabled
+
+4. Click on "Image Generation" in the extensions panel
+
+5. Configure the following settings:
+
+   SOURCE:
+   ┌─────────────────────────────────────┐
+   │ Select: "Stable Diffusion"          │
+   └─────────────────────────────────────┘
+
+   API URL:
+   ┌─────────────────────────────────────┐
+   │ http://127.0.0.1:7860               │
+   └─────────────────────────────────────┘
+
+   MODEL:
+   ┌─────────────────────────────────────┐
+   │ Select your downloaded model from   │
+   │ the dropdown (e.g., ponyDiffusion)  │
+   └─────────────────────────────────────┘
+
+6. RECOMMENDED SETTINGS FOR RTX 2080 Ti:
+
+   Sampling Steps: 20-30
+   CFG Scale: 7
+   Width: 512 or 768 (higher = slower)
+   Height: 512 or 768
+   Sampler: DPM++ 2M Karras or Euler a
+
+   For SDXL models (Pony Diffusion XL):
+   Width: 1024
+   Height: 1024
+   Steps: 25-35
+
+7. PROMPT SETTINGS:
+
+   Enable "Refine Prompt" if you want SillyTavern to enhance prompts
+
+   Add these to your NEGATIVE PROMPT (optional but recommended):
+   ┌─────────────────────────────────────────────────────────┐
+   │ low quality, worst quality, bad anatomy, bad hands,     │
+   │ text, watermark, signature, ugly, blurry                │
+   └─────────────────────────────────────────────────────────┘
+
+8. Click "Test" to verify connection
+
+9. Click "Save Settings"
+
+STEP 3: USAGE IN SILLYTAVERN
+-----------------------------
+• Type /image <your prompt> in chat to generate images
+  Example: /image beautiful sunset over mountains
+
+• Or enable "Auto-generate images" to create images based on chat context
+
+• Images will appear in the chat or in the dedicated image panel
+
+TROUBLESHOOTING
+---------------
+Problem: "Connection failed" error
+Solution:
+  - Make sure Forge is running (check the console window)
+  - Verify it shows "Running on local URL: http://127.0.0.1:7860"
+  - Try accessing http://127.0.0.1:7860 in your web browser
+  - Make sure API is enabled in webui-user.bat (--api flag)
+
+Problem: Images are too slow
+Solution:
+  - Reduce image size (try 512x512 instead of 1024x1024)
+  - Reduce sampling steps (try 20 instead of 30)
+  - Use SD 1.5 models instead of SDXL for faster generation
+  - Make sure --xformers is in your launch args
+
+Problem: Out of memory errors
+Solution:
+  - Add --medvram to launch args (already included)
+  - Reduce batch size to 1
+  - Lower resolution (512x512)
+  - Close other GPU-intensive applications
+
+Problem: Images are low quality
+Solution:
+  - Increase sampling steps (30-40)
+  - Try different samplers (DPM++ 2M Karras is good)
+  - Adjust CFG scale (7-9 usually works well)
+  - Use better quality models
+  - Improve your prompts with more detail
+
+NSFW GENERATION
+---------------
+• Most models support NSFW by default
+• Forge doesn't have safety filters enabled
+• Add detailed descriptions to your prompts for better results
+• Use appropriate negative prompts to avoid unwanted elements
+• Pony Diffusion XL and AutismMix are popular for NSFW content
+
+PERFORMANCE TIPS FOR RTX 2080 Ti
+---------------------------------
+✓ SDXL models (1024x1024): ~15-30 seconds per image
+✓ SD 1.5 models (512x512): ~5-10 seconds per image
+✓ Use --xformers for faster generation (already enabled)
+✓ Use --medvram to prevent OOM errors (already enabled)
+✓ Keep other GPU applications closed during generation
+
+For best performance/quality balance:
+- SDXL: 25 steps, 1024x1024, DPM++ 2M Karras
+- SD 1.5: 20 steps, 512x512, Euler a
+
+============================================
+Need help? Check README.txt for more info
+============================================

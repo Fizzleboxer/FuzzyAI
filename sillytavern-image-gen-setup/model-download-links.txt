@@ -1,0 +1,177 @@
+============================================
+Recommended NSFW Models for RTX 2080 Ti
+============================================
+
+These models are optimized for your GPU and support NSFW content.
+Download and place them in: C:\SD-Forge\stable-diffusion-webui-forge\models\Stable-diffusion\
+
+WHERE TO DOWNLOAD MODELS
+------------------------
+Primary source: https://civitai.com/
+Alternative: https://huggingface.co/
+
+⚠️ NOTE: You'll need to create a free account on CivitAI to download models
+⚠️ Enable "Show NSFW content" in CivitAI settings to see all models
+
+
+TOP RECOMMENDATIONS (Pick 1-2 to start)
+========================================
+
+1. PONY DIFFUSION XL (SDXL-based) ⭐ HIGHLY RECOMMENDED
+   -------------------------------------------------
+   Best overall quality for NSFW
+   File size: ~6-7 GB
+   Resolution: 1024x1024
+   Speed on 2080 Ti: ~20-30 sec/image
+
+   Download: https://civitai.com/models/257749/pony-diffusion-v6-xl
+
+   Recommended settings:
+   - Steps: 25-35
+   - CFG: 7
+   - Sampler: DPM++ 2M Karras or Euler a
+   - Resolution: 1024x1024
+
+
+2. AUTISMMIX SDXL
+   ---------------
+   Excellent quality, versatile
+   File size: ~6-7 GB
+   Resolution: 1024x1024
+   Speed on 2080 Ti: ~20-30 sec/image
+
+   Download: https://civitai.com/models/288584/autismmix-sdxl
+
+   Recommended settings:
+   - Steps: 28-35
+   - CFG: 6-8
+   - Sampler: DPM++ 2M Karras
+   - Resolution: 1024x1024
+
+
+3. DELIBERATE (SD 1.5) ⚡ FASTEST OPTION
+   --------------------------------------
+   Fast generation, good quality
+   File size: ~2 GB
+   Resolution: 512x512 (or 768x768)
+   Speed on 2080 Ti: ~5-10 sec/image
+
+   Download: https://civitai.com/models/4823/deliberate
+
+   Recommended settings:
+   - Steps: 20-25
+   - CFG: 7
+   - Sampler: Euler a or DPM++ 2M Karras
+   - Resolution: 512x512
+
+
+4. REALISTIC VISION (SD 1.5)
+   --------------------------
+   Photorealistic style
+   File size: ~2 GB
+   Resolution: 512x512
+   Speed on 2080 Ti: ~5-10 sec/image
+
+   Download: https://civitai.com/models/4201/realistic-vision-v60-b1
+
+   Recommended settings:
+   - Steps: 20-30
+   - CFG: 7
+   - Sampler: DPM++ SDE Karras
+   - Resolution: 512x512
+
+
+5. DREAMSHAPER (SD 1.5/SDXL versions available)
+   ---------------------------------------------
+   Versatile, good for various styles
+   File size: ~2 GB (1.5) or ~6 GB (XL)
+
+   Download: https://civitai.com/models/4384/dreamshaper
+
+   Choose SD 1.5 for speed or SDXL for quality
+
+
+INSTALLATION INSTRUCTIONS
+==========================
+
+1. Download your chosen model (.safetensors file)
+
+2. Place it in this folder:
+   C:\SD-Forge\stable-diffusion-webui-forge\models\Stable-diffusion\
+
+3. Restart Forge (close and run START-SD-FORGE.bat again)
+
+4. Select the model in the WebUI dropdown at the top left
+
+5. Or select it in SillyTavern's Image Generation settings
+
+
+PROMPT TIPS FOR BETTER RESULTS
+===============================
+
+GOOD PROMPTS:
+✓ Be specific and detailed
+✓ Use quality tags: "masterpiece, best quality, highly detailed"
+✓ Describe lighting, mood, composition
+✓ Specify art style if desired
+
+EXAMPLE:
+"masterpiece, best quality, 1girl, long red hair, green eyes,
+wearing elegant dress, sitting on beach, sunset, warm lighting,
+detailed face, photorealistic"
+
+NEGATIVE PROMPTS (what to avoid):
+"low quality, worst quality, bad anatomy, bad hands, missing fingers,
+extra digits, fewer digits, text, watermark, signature, username,
+blurry, ugly, disfigured"
+
+
+VAE (OPTIONAL BUT RECOMMENDED)
+==============================
+VAE improves color and quality. Download and place in:
+C:\SD-Forge\stable-diffusion-webui-forge\models\VAE\
+
+For SDXL models:
+- SDXL VAE: https://huggingface.co/stabilityai/sdxl-vae/blob/main/sdxl_vae.safetensors
+
+For SD 1.5 models:
+- vae-ft-mse: https://huggingface.co/stabilityai/sd-vae-ft-mse-original/blob/main/vae-ft-mse-840000-ema-pruned.safetensors
+
+
+STORAGE REQUIREMENTS
+====================
+- Each SDXL model: ~6-7 GB
+- Each SD 1.5 model: ~2-4 GB
+- VAE files: ~300-800 MB
+
+Recommendation for 2080 Ti: Start with ONE SDXL model (Pony Diffusion XL)
+and ONE SD 1.5 model (Deliberate) for variety in speed/quality.
+
+Total: ~8-9 GB for both
+
+
+GPU VRAM USAGE
+==============
+Your RTX 2080 Ti has 11GB VRAM:
+
+SDXL models (1024x1024):
+- With optimizations: ~8-10 GB VRAM ✓ WORKS
+- Close browser/other apps if you hit limits
+
+SD 1.5 models (512x512):
+- With optimizations: ~4-6 GB VRAM ✓ WORKS GREAT
+- Plenty of headroom for other apps
+
+
+NEED MORE MODELS?
+=================
+Browse CivitAI by category:
+- Anime: https://civitai.com/models?types=Checkpoint&baseModels=Pony
+- Realistic: https://civitai.com/models?types=Checkpoint&tags=photorealistic
+- NSFW: Enable NSFW filter in account settings
+
+Sort by "Most Downloaded" or "Highest Rated" for best results.
+
+============================================
+Happy generating! 🎨
+============================================
