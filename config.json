@@ -1,0 +1,12 @@
+{
+  "model": ["ollama/gpt-oss:20b"],
+  "attack_modes": ["def"],
+  "classifier": [],
+  "extra": [
+    "system_prompt=",
+    "temperature=1.0",
+    "top_p=0.95",
+    "top_k=50",
+    "num_ctx=4096"
+  ]
+}
