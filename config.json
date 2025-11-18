@@ -1,5 +1,5 @@
 {
-  "model": ["ollama/gpt-oss:20b"],
+  "model": ["ollama/dolphin-mixtral"],
   "attack_modes": ["def"],
   "classifier": [],
   "extra": [
