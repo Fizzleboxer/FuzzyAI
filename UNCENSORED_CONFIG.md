@@ -26,11 +26,14 @@ This configuration file (`config.json`) is set up for running the dolphin-mixtra
 To use this configuration with FuzzyAI:
 
 ```bash
-# Using the config file
-fuzzyai --config config.json
+# Using the config file with the fuzz command
+fuzzyai fuzz -C config.json -t "your prompt here"
 
-# Or specify parameters directly
-fuzzyai --model ollama/dolphin-mixtral --attack-modes def -e system_prompt= -e temperature=1.0 -e top_p=0.95 -e top_k=50 -e num_ctx=4096
+# Or with a file containing multiple prompts
+fuzzyai fuzz -C config.json -T prompts.txt
+
+# Or specify parameters directly without config file
+fuzzyai fuzz -m ollama/dolphin-mixtral -a def -e system_prompt= -e temperature=1.0 -e top_p=0.95 -e top_k=50 -e num_ctx=4096 -t "your prompt here"
 ```
 
 ### Prerequisites
